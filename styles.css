@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  background: #e4ebf5;
+  color: #9baacf;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.counter {
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  padding: 1.3rem;
+  margin: 10px;
+  text-align: center;
+  min-width: 5rem;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem white;
+  background: #e4ebf5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counter p {
+  margin: 7px;
+}
+
+.counter:hover,
+h1:hover {
+  color: #6d5dfc;
+}
+
+.counter-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#edit {
+  font-size: 20px;
+}
+
+#edit:hover {
+  color: #6d5dfc;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 20px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+button {
+  padding: 8px 18px;
+  background-color: #9baacf;
+  margin: 10px 0 0;
+  color: #e4ebf5;
+  border-radius: 4px;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 16px;
+  border: 1px solid #9baacf;
+  font-weight: 600;
+  height: 38px;
+}
+
+button:hover {
+  background-color: #e4ebf5;
+  color: #9baacf;
+  border: 1px solid #9baacf;
+  cursor: pointer;
+}
+
+select,
+input[type="date"] {
+  /*     width: 50%; */
+  height: 38px;
+  padding: 5px 14px;
+  margin: 12px 0 10px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+input[type="date"] {
+  height: 26px;
+}
+
+.date-edit {
+  z-index: 1;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+
+  height: 55%;
+  min-height: 270px;
+  width: 250px;
+  padding: 35px;
+  margin: auto;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px 3px rgb(0 0 0 / 12%), 0 3px 5px rgb(0 0 0 / 24%);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-date {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .event {
+    font-size: 0.7rem;
+  }
+  .counter {
+    height: 60px;
+    width: 60px;
+    padding: 1rem;
+    min-width: 2rem;
+    font-size: 0.6rem;
+  }
+  .counter p {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .event {
+    font-size: 0.5rem;
+  }
+  .counter {
+    height: 40px;
+    width: 40px;
+    padding: 0.6rem;
+    min-width: 2rem;
+    font-size: 0.5rem;
+  }
+  .counter p {
+    margin: 3px;
+  }
+}

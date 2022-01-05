@@ -1,49 +1,69 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="date-edit" id="date-edit" onchange="customDate()">
-  <a href="#" class="close" id="close" title="Close"></a>
-  <form>
-    <label for="date">Select Date</label><br>
-    <select name="date" id="date">
-      <option value="newYear">New Year</option>
-      <option value="nextDay">Next Day</option>
-      <option value="republicDay">Republic Day</option>
-      <option value="independanceDay">Independance Day</option>
-      <option value="custom">Custom</option>
-    </select><br>
-    <div class='custom-date'>
-      <label for="random-date">Select Custom Date:</label>
-      <input type="date" id="random-date" name="random-date">
-    </div>
-    <!--     <p class="form-error" id="form-error">Please fill all the required fields</p> -->
-    <button type="button" id="btnSubmit">Submit</button>
-  </form>
-</div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
-<div class="container">
-  <div class="event">
-    <h1><span class="eventName">New Year in </span><i title='Edit Date' id='edit' class='fas fa-pen'></i></h1>
-  </div>
-  <div class="counter-cont">
-    <div class="counter">
-      <p id="days" class="value">0</p>
-      <p class="unit" id="days-label">DAYS</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="date-edit" id="date-edit" onchange="customDate()">
+        <a href="#" class="close" id="close" title="Close"></a>
+        <form>
+            <label for="date">Select Date</label><br>
+            <select name="date" id="date">
+                <option value="newYear">New Year</option>
+                <option value="nextDay">Next Day</option>
+                <option value="republicDay">Republic Day</option>
+                <option value="independanceDay">Independance Day</option>
+                <option value="custom">Custom</option>
+            </select><br>
+            <div class='custom-date'>
+                <label for="random-date">Select Custom Date:</label>
+                <input type="date" id="random-date" name="random-date">
+            </div>
+            <!--     <p class="form-error" id="form-error">Please fill all the required fields</p> -->
+            <button type="button" id="btnSubmit">Submit</button>
+        </form>
     </div>
-    <div class="counter">
-      <p id="hours" class="value">00</p>
-      <p class="unit" id="hours-label">HOURS</p>
+
+    <div class="container">
+        <div class="event">
+            <h1><span class="eventName">New Year in </span><i title='Edit Date' id='edit' class='fas fa-pen'></i></h1>
+        </div>
+        <div class="counter-cont">
+            <div class="counter">
+                <p id="days" class="value">0</p>
+                <p class="unit" id="days-label">DAYS</p>
+            </div>
+            <div class="counter">
+                <p id="hours" class="value">00</p>
+                <p class="unit" id="hours-label">HOURS</p>
+            </div>
+            <div class="counter">
+                <p id="mins" class="value">00</p>
+                <p class="unit" id="mins-label">MINUTES</p>
+            </div>
+            <div class="counter">
+                <p id="seconds" class="value">00</p>
+                <p class="unit" id="seconds-label">SECONDS</p>
+            </div>
+        </div>
     </div>
-    <div class="counter">
-      <p id="mins" class="value">00</p>
-      <p class="unit" id="mins-label">MINUTES</p>
-    </div>
-    <div class="counter">
-      <p id="seconds" class="value">00</p>
-      <p class="unit" id="seconds-label">SECONDS</p>
-    </div>
-  </div>
-</div>
+
+</body>
+
+</html>
